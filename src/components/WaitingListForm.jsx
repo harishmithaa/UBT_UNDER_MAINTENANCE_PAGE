@@ -183,7 +183,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
               className="w-full max-w-md lg:max-w-full"
             >
               <img 
-                src="/sample_profile_page.png?v=2" 
+                src="/sample_profile_page.jpg?v=3" 
                 alt="Sample Business Profile Landing Page Preview" 
                 className="w-full h-auto object-contain drop-shadow-xl rounded-2xl border border-slate-200/50"
               />
