@@ -36,6 +36,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
 
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const [isJoined, setIsJoined] = useState(false);
 
   const validate = () => {
     const tempErrors = {};
@@ -71,6 +72,10 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
+    // Revert joined state if user begins typing again
+    if (isJoined) {
+      setIsJoined(false);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -99,6 +104,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
             label: 'Email Opt-In Success (Demo Mode)'
           });
         }
+        setIsJoined(true);
         showToast("Demo Mode: Early access registration submitted successfully (No spreadsheet configured)!", "warning");
         setFormData({ name: '', businessName: '', mobile: '', category: '', customCategory: '', email: '' });
       }, 1500);
@@ -138,6 +144,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
             label: 'Email Opt-In Success'
           });
         }
+        setIsJoined(true);
         showToast(result.message || "Successfully registered for early access!", "success");
         setFormData({ name: '', businessName: '', mobile: '', category: '', customCategory: '', email: '' });
       } else {
@@ -356,13 +363,22 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="bg-primary hover:bg-primary-hover text-white text-[11.5px] font-extrabold py-3 px-6 rounded-xl transition-all shadow-md shadow-emerald-950/15 flex items-center justify-center gap-2 mt-2 cursor-pointer disabled:bg-slate-300 disabled:shadow-none"
-                  disabled={loading}
+                  className={`text-white text-[11.5px] font-extrabold py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 mt-2 cursor-pointer ${
+                    isJoined 
+                      ? 'bg-emerald-600 shadow-emerald-950/10 cursor-default' 
+                      : 'bg-primary hover:bg-primary-hover shadow-emerald-950/15 disabled:bg-slate-300 disabled:shadow-none'
+                  }`}
+                  disabled={loading || isJoined}
                 >
                   {loading ? (
                     <>
                       <div className="h-3.5 w-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin shrink-0" />
                       <span>Submitting Application...</span>
+                    </>
+                  ) : isJoined ? (
+                    <>
+                      <CheckCircle2 className="h-4 w-4 text-emerald-100" />
+                      <span>Joined</span>
                     </>
                   ) : (
                     <>
