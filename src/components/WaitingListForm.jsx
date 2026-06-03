@@ -174,20 +174,22 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center max-w-6xl w-full mx-auto">
           
           {/* Left Column: Related Illustration */}
-          <div className="lg:col-span-6 flex justify-center items-center select-none pointer-events-none">
+          <div className="lg:col-span-6 flex justify-center items-center select-none">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-full max-w-md lg:max-w-full"
+              className="w-full max-w-md lg:max-w-full cursor-zoom-in"
             >
-              <img 
-                src="/sample_profile_page.jpg?v=5" 
-                alt="Sample Business Profile Landing Page Preview" 
-                className="w-full h-auto object-contain drop-shadow-xl rounded-2xl border border-slate-200/50"
-                style={{ imageRendering: '-webkit-optimize-contrast' }}
-              />
+              <a href="/sample_profile_page.jpg?v=5" target="_blank" rel="noopener noreferrer" title="Click to view full high-resolution profile preview">
+                <img 
+                  src="/sample_profile_page.jpg?v=5" 
+                  alt="Sample Business Profile Landing Page Preview" 
+                  className="w-full h-auto object-contain drop-shadow-xl rounded-2xl border border-slate-200/50 hover:scale-[1.01] transition-transform duration-300"
+                  style={{ imageRendering: '-webkit-optimize-contrast' }}
+                />
+              </a>
             </motion.div>
           </div>
 
