@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Youtube, Send } from 'lucide-react';
+import { trackEvent } from '../utils/analytics';
 
 export default function Navbar() {
   const scrollToForm = (e) => {
@@ -8,6 +9,23 @@ export default function Navbar() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const handleJoinClick = (e) => {
+    trackEvent({
+      category: 'Engagement',
+      action: 'click_join_waitlist',
+      label: 'Navbar CTA'
+    });
+    scrollToForm(e);
+  };
+
+  const handleSocialClick = (platform) => {
+    trackEvent({
+      category: 'Social',
+      action: 'click_social_link',
+      label: `Navbar ${platform}`
+    });
   };
 
   return (
@@ -22,23 +40,23 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <div className="hidden sm:flex items-center gap-3.5 text-xs font-bold text-slate-500">
             <span className="text-slate-400 font-semibold uppercase tracking-wider text-[10px]">Follow Us:</span>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
+            <a href="https://facebook.com" onClick={() => handleSocialClick('Facebook')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
               <Facebook className="h-3.5 w-3.5" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
+            <a href="https://instagram.com" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
               <Instagram className="h-3.5 w-3.5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
+            <a href="https://linkedin.com" onClick={() => handleSocialClick('LinkedIn')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
               <Linkedin className="h-3.5 w-3.5" />
             </a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
+            <a href="https://youtube.com" onClick={() => handleSocialClick('YouTube')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
               <Youtube className="h-3.5 w-3.5" />
             </a>
           </div>
 
           <a
             href="#waiting-list-section"
-            onClick={scrollToForm}
+            onClick={handleJoinClick}
             className="bg-primary hover:bg-primary-hover text-white text-xs font-extrabold px-4 py-2.5 rounded-xl transition-all shadow-md shadow-emerald-950/5 flex items-center gap-1.5 cursor-pointer"
           >
             <Send className="h-3 w-3" />

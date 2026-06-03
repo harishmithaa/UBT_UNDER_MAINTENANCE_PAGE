@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, Store, Calendar } from 'lucide-react';
+import { trackEvent } from '../utils/analytics';
 
 export default function Hero({ launchTarget = 'July 2026' }) {
   const scrollToForm = (e) => {
@@ -9,6 +10,24 @@ export default function Hero({ launchTarget = 'July 2026' }) {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const handleJoinClick = (e) => {
+    trackEvent({
+      category: 'Engagement',
+      action: 'click_join_early_access',
+      label: 'Hero primary CTA'
+    });
+    scrollToForm(e);
+  };
+
+  const handleRegisterClick = (e) => {
+    trackEvent({
+      category: 'Engagement',
+      action: 'click_register_business',
+      label: 'Hero secondary CTA'
+    });
+    scrollToForm(e);
   };
 
   return (
@@ -102,7 +121,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
           >
             <a 
               href="#waiting-list-section"
-              onClick={scrollToForm}
+              onClick={handleJoinClick}
               className="bg-primary hover:bg-primary-hover text-white font-extrabold text-xs py-3.5 px-6 rounded-xl transition-all shadow-md shadow-emerald-950/10 flex items-center justify-center gap-2 cursor-pointer border border-transparent"
             >
               <Rocket className="h-4 w-4 text-emerald-100" />
@@ -110,7 +129,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
             </a>
             <a 
               href="#waiting-list-section"
-              onClick={scrollToForm}
+              onClick={handleRegisterClick}
               className="bg-white hover:bg-slate-50 border-2 border-primary text-primary font-extrabold text-xs py-3.5 px-6 rounded-xl transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer"
             >
               <Store className="h-4 w-4" />

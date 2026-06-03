@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Store, Phone, FolderOpen, Mail, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { trackEvent } from '../utils/analytics';
 
 const categories = [
   'Automotive',
@@ -85,6 +86,19 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
       // Offline fallback for demo if script URL is not yet updated by user
       setTimeout(() => {
         setLoading(false);
+        // Track analytics events on successful form submission in demo mode
+        trackEvent({
+          category: 'Form',
+          action: 'submit_waitlist_form',
+          label: 'Waitlist Signup Success (Demo Mode)'
+        });
+        if (formData.email.trim()) {
+          trackEvent({
+            category: 'Form',
+            action: 'email_subscription_submit',
+            label: 'Email Opt-In Success (Demo Mode)'
+          });
+        }
         showToast("Demo Mode: Early access registration submitted successfully (No spreadsheet configured)!", "warning");
         setFormData({ name: '', businessName: '', mobile: '', category: '', customCategory: '', email: '' });
       }, 1500);
@@ -111,6 +125,19 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
       const result = await response.json();
 
       if (result.success) {
+        // Track analytics events on successful form submission
+        trackEvent({
+          category: 'Form',
+          action: 'submit_waitlist_form',
+          label: 'Waitlist Signup Success'
+        });
+        if (formData.email.trim()) {
+          trackEvent({
+            category: 'Form',
+            action: 'email_subscription_submit',
+            label: 'Email Opt-In Success'
+          });
+        }
         showToast(result.message || "Successfully registered for early access!", "success");
         setFormData({ name: '', businessName: '', mobile: '', category: '', customCategory: '', email: '' });
       } else {

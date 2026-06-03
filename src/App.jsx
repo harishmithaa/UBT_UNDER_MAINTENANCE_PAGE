@@ -7,6 +7,7 @@ import WhyJoinEarly from './components/WhyJoinEarly';
 import WaitingListForm from './components/WaitingListForm';
 import Footer from './components/Footer';
 import { CheckCircle2, AlertCircle, Sparkles } from 'lucide-react';
+import { initGA, trackPageView } from './utils/analytics';
 
 export default function App() {
   const [stats, setStats] = useState({
@@ -19,6 +20,12 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [toast, setToast] = useState(null);
   const [toastTimeoutId, setToastTimeoutId] = useState(null);
+
+  // Initialize Google Analytics 4 and track initial pageview
+  useEffect(() => {
+    initGA();
+    trackPageView();
+  }, []);
 
   // Load backend configuration dynamically
   useEffect(() => {
