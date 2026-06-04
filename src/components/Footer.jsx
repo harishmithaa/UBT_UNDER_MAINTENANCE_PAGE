@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Youtube, Send, Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Phone, Mail, Clock, MapPin } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 
 export default function Footer() {
@@ -39,17 +39,11 @@ export default function Footer() {
             A trusted local platform to discover, connect and grow with verified businesses in and around Udumalpet.
           </p>
           <div className="flex items-center gap-3 mt-1">
-            <a href="https://facebook.com" onClick={() => handleSocialClick('Facebook')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
+            <a href="https://www.facebook.com/profile.php?id=61590472206771" onClick={() => handleSocialClick('Facebook')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href="https://instagram.com" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
+            <a href="https://www.instagram.com/udumalpet.co.in/" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
               <Instagram className="h-4 w-4" />
-            </a>
-            <a href="https://whatsapp.com" onClick={() => handleSocialClick('WhatsApp')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
-              <Send className="h-4 w-4" />
-            </a>
-            <a href="https://youtube.com" onClick={() => handleSocialClick('YouTube')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
-              <Youtube className="h-4 w-4" />
             </a>
           </div>
         </div>

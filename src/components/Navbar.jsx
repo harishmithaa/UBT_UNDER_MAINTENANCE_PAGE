@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Youtube, Send } from 'lucide-react';
+import { Facebook, Instagram, Send } from 'lucide-react';
 import { trackEvent } from '../utils/analytics';
 
 export default function Navbar() {
@@ -40,17 +40,11 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <div className="hidden sm:flex items-center gap-3.5 text-xs font-bold text-slate-500">
             <span className="text-slate-400 font-semibold uppercase tracking-wider text-[10px]">Follow Us:</span>
-            <a href="https://facebook.com" onClick={() => handleSocialClick('Facebook')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
+            <a href="https://www.facebook.com/profile.php?id=61590472206771" onClick={() => handleSocialClick('Facebook')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
               <Facebook className="h-3.5 w-3.5" />
             </a>
-            <a href="https://instagram.com" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
+            <a href="https://www.instagram.com/udumalpet.co.in/" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
               <Instagram className="h-3.5 w-3.5" />
-            </a>
-            <a href="https://linkedin.com" onClick={() => handleSocialClick('LinkedIn')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
-              <Linkedin className="h-3.5 w-3.5" />
-            </a>
-            <a href="https://youtube.com" onClick={() => handleSocialClick('YouTube')} target="_blank" rel="noopener noreferrer" className="h-7 w-7 rounded-full border border-slate-200 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-500">
-              <Youtube className="h-3.5 w-3.5" />
             </a>
           </div>
 
