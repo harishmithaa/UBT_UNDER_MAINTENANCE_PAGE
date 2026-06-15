@@ -58,12 +58,12 @@ export default function Statistics({ stats }) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5"
         >
           {/* Businesses Interested */}
           <motion.div
             variants={cardVariants}
-            className="border border-slate-200/60 rounded-2xl py-4 px-5 bg-white flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
+            className="border border-slate-200/60 rounded-2xl py-3 px-3 sm:py-4 sm:px-5 bg-white flex items-center gap-2 sm:gap-4 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="h-10 w-10 rounded-xl bg-emerald-50 text-primary flex items-center justify-center shrink-0">
               <Users2 className="h-5 w-5" />
@@ -79,7 +79,7 @@ export default function Statistics({ stats }) {
           {/* Categories Planned */}
           <motion.div
             variants={cardVariants}
-            className="border border-slate-200/60 rounded-2xl py-4 px-5 bg-white flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
+            className="border border-slate-200/60 rounded-2xl py-3 px-3 sm:py-4 sm:px-5 bg-white flex items-center gap-2 sm:gap-4 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="h-10 w-10 rounded-xl bg-emerald-50 text-primary flex items-center justify-center shrink-0">
               <FolderOpen className="h-5 w-5" />
@@ -95,7 +95,7 @@ export default function Statistics({ stats }) {
           {/* Events Expected */}
           <motion.div
             variants={cardVariants}
-            className="border border-slate-200/60 rounded-2xl py-4 px-5 bg-white flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
+            className="border border-slate-200/60 rounded-2xl py-3 px-3 sm:py-4 sm:px-5 bg-white flex items-center gap-2 sm:gap-4 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="h-10 w-10 rounded-xl bg-emerald-50 text-primary flex items-center justify-center shrink-0">
               <CalendarDays className="h-5 w-5" />
@@ -111,7 +111,7 @@ export default function Statistics({ stats }) {
           {/* Launch Target */}
           <motion.div
             variants={cardVariants}
-            className="border border-slate-200/60 rounded-2xl py-4 px-5 bg-white flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow"
+            className="border border-slate-200/60 rounded-2xl py-3 px-3 sm:py-4 sm:px-5 bg-white flex items-center gap-2 sm:gap-4 shadow-sm hover:shadow-md transition-shadow"
           >
             <div className="h-10 w-10 rounded-xl bg-emerald-50 text-primary flex items-center justify-center shrink-0">
               <Rocket className="h-5 w-5" />
