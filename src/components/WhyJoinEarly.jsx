@@ -4,17 +4,17 @@ import { Award, Flame, Gift } from 'lucide-react';
 
 const benefits = [
   {
-    icon: <Award className="h-5 w-5 text-primary shrink-0" />,
+    icon: <Award className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
     title: "Priority Listing Rank",
     desc: "Early registrations will be prioritized at the top of category searches during our launch, guaranteeing maximum initial views."
   },
   {
-    icon: <Flame className="h-5 w-5 text-primary shrink-0" />,
+    icon: <Flame className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
     title: "Early Profile Setup",
     desc: "Gain early entry to build your digital visiting card, list products, and set up your details before the public launch."
   },
   {
-    icon: <Gift className="h-5 w-5 text-primary shrink-0" />,
+    icon: <Gift className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
     title: "Referral Rewards",
     desc: "Invite other local businesses to UBT and earn premium account credits and marketing upgrades."
   }
@@ -70,13 +70,13 @@ export default function WhyJoinEarly() {
         </motion.div>
 
         {/* Right Side: Detailed Benefits */}
-        <div className="lg:col-span-7 flex flex-col gap-6">
+        <div className="lg:col-span-7 flex flex-col gap-8 sm:gap-10">
           <div>
             <span className="text-primary font-extrabold text-xs uppercase tracking-widest">Early Partner Benefits</span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-secondary tracking-tight mt-1">
               Grow Your Business with Pre-Launch Exposure
             </h2>
-            <p className="text-sm text-slate-400 font-semibold mt-1.5 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-400 font-semibold mt-2 leading-relaxed max-w-xl">
               Secure key directories, publish catalogs early, and accumulate initial customer search history to establish search ranking leadership.
             </p>
           </div>
@@ -86,16 +86,16 @@ export default function WhyJoinEarly() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col gap-5"
+            className="flex flex-col gap-6 sm:gap-8"
           >
             {benefits.map((benefit, idx) => (
-              <div key={idx} className="flex gap-4.5 items-start py-1.5">
-                <div className="h-10 w-10 rounded-xl bg-emerald-50 text-primary flex items-center justify-center shrink-0 select-none">
+              <div key={idx} className="flex gap-4 items-start">
+                <div className="h-7 w-7 rounded-lg bg-emerald-50 text-primary flex items-center justify-center shrink-0 mt-0.5 select-none">
                   {benefit.icon}
                 </div>
-                <div className="flex flex-col gap-1">
-                  <h4 className="text-sm sm:text-base font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
-                  <p className="text-slate-500 text-sm sm:text-sm font-semibold leading-relaxed mt-0.5">{benefit.desc}</p>
+                <div className="flex flex-col gap-0.5">
+                  <h4 className="text-xs font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
+                  <p className="text-slate-500 text-xs font-semibold leading-relaxed mt-1 max-w-md sm:max-w-lg">{benefit.desc}</p>
                 </div>
               </div>
             ))}
