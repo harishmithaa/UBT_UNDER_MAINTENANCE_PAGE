@@ -87,7 +87,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary tracking-tight leading-tight max-w-2xl font-sans"
           >
             Udumalpet's Largest <br />
-            Business Network <br />
+            Business Directory <br />
             is <span className="text-primary font-black relative inline-block">
               Coming Soon!
               <span className="absolute bottom-1 left-0 w-full h-1 bg-primary/20 rounded-full"></span>

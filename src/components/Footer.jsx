@@ -103,7 +103,7 @@ export default function Footer() {
                   fill="currentColor"
                 />
               </svg>
-              <a href="https://wa.me/919787241221" target="_blank" rel="noopener noreferrer" onClick={() => handleContactClick('WhatsApp')} className="hover:text-emerald-500 transition-colors">+91 9787241221</a>
+              <a href="https://wa.me/919787241221" target="_blank" rel="noopener noreferrer" onClick={() => handleContactClick('WhatsApp')} className="hover:text-emerald-500 transition-colors">WhatsApp</a>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="h-4.5 w-4.5 text-emerald-500 shrink-0" />
