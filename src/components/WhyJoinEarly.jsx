@@ -4,103 +4,84 @@ import { Award, Flame, Gift } from 'lucide-react';
 
 const benefits = [
   {
-    icon: <Award className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
+    icon: <Award className="h-5 w-5 text-white" />,
     title: "Priority Listing Rank",
     desc: "Early registrations will be prioritized at the top of category searches during our launch, guaranteeing maximum initial views."
   },
   {
-    icon: <Flame className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
+    icon: <Flame className="h-5 w-5 text-white" />,
     title: "Early Profile Setup",
     desc: "Gain early entry to build your digital visiting card, list products, and set up your details before the public launch."
   },
   {
-    icon: <Gift className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
+    icon: <Gift className="h-5 w-5 text-white" />,
     title: "Referral Rewards",
     desc: "Invite other local businesses to UBT and earn premium account credits and marketing upgrades."
   }
 ];
 
 export default function WhyJoinEarly() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } }
+  };
+
   return (
     <section id="benefits-section" className="w-full bg-[#FFFFFF] py-16 sm:py-24 px-4 md:px-8 border-t border-slate-100">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto flex flex-col gap-10 sm:gap-12">
         
-        {/* Left Side: Summary Graphic */}
-        <motion.div 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="lg:col-span-5 bg-white border border-slate-200/50 rounded-2xl p-8 shadow-md flex flex-col gap-6 relative overflow-hidden"
-        >
-          <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-emerald-50/55 z-0 pointer-events-none" />
-          
-          <div className="relative z-10 flex flex-col gap-3">
-            <span className="text-[#d97706] font-bold text-xs uppercase tracking-widest bg-amber-50 border border-amber-100 rounded-full px-2.5 py-0.5 self-start">
-              Early Access benefits
-            </span>
-            <h3 className="text-lg font-extrabold text-secondary tracking-tight">
-              Why Register Today?
-            </h3>
-            <p className="text-sm text-slate-400 font-semibold leading-relaxed">
-              Registering during the pre-launch phase guarantees your business gets prominent placement. Stand out to potential customers when we go live.
-            </p>
-          </div>
-
-          <div className="border-t border-slate-100 pt-5 flex flex-col gap-4 relative z-10">
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
-                1
-              </div>
-              <span className="text-sm font-bold text-slate-700">Priority Listing Rank</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
-                2
-              </div>
-              <span className="text-sm font-bold text-slate-700">Exclusive Pre-Launch Features</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
-                3
-              </div>
-              <span className="text-sm font-bold text-slate-700">Referral Rewards Upgrades</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right Side: Detailed Benefits */}
-        <div className="lg:col-span-7 flex flex-col gap-10 sm:gap-12">
-          <div>
-            <span className="text-primary font-extrabold text-xs uppercase tracking-widest">Early Partner Benefits</span>
-            <h2 className="text-xl sm:text-2xl font-extrabold text-secondary tracking-tight mt-1">
-              Grow Your Business with Pre-Launch Exposure
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-400 font-semibold mt-2.5 leading-relaxed max-w-xl">
-              Secure key directories, publish catalogs early, and accumulate initial customer search history to establish search ranking leadership.
-            </p>
-          </div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col gap-8 sm:gap-10"
-          >
-            {benefits.map((benefit, idx) => (
-              <div key={idx} className="flex gap-5 items-start">
-                <div className="h-7 w-7 rounded-lg bg-emerald-50 text-primary flex items-center justify-center shrink-0 mt-0.5 select-none">
-                  {benefit.icon}
-                </div>
-                <div className="flex flex-col gap-0.5">
-                  <h4 className="text-xs font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
-                  <p className="text-slate-500 text-xs font-semibold leading-relaxed mt-2 max-w-md sm:max-w-xl">{benefit.desc}</p>
-                </div>
-              </div>
-            ))}
-          </motion.div>
+        {/* Centered Header Section */}
+        <div className="text-center flex flex-col gap-3 max-w-3xl mx-auto">
+          <span className="text-primary font-extrabold text-xs uppercase tracking-widest">Early Partner Benefits</span>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-secondary tracking-tight">
+            Grow Your Business with Pre-Launch Exposure
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-400 font-semibold leading-relaxed">
+            Secure key directories, publish catalogs early, and accumulate initial customer search history to establish search ranking leadership.
+          </p>
         </div>
+
+        {/* Benefits Grid of Cards - matching Features sizing and style */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
+        >
+          {benefits.map((benefit, idx) => (
+            <motion.div
+              key={idx}
+              variants={cardVariants}
+              className={`card-premium rounded-xl py-6 px-5 bg-white hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group border border-slate-200/50 shadow-sm hover:shadow-md ${
+                idx === 2 ? 'col-span-1 sm:col-span-2 lg:col-span-1' : ''
+              }`}
+            >
+              {/* Solid Green circular background with white icon */}
+              <div className="h-11 w-11 rounded-full bg-primary flex items-center justify-center shrink-0 mb-4 transition-transform duration-300 group-hover:scale-105 shadow-md shadow-emerald-950/5">
+                {benefit.icon}
+              </div>
+              <div className="flex flex-col gap-1 flex-grow justify-start">
+                <h3 className="font-extrabold text-secondary text-sm sm:text-base leading-tight transition-colors duration-300 group-hover:text-primary">
+                  {benefit.title}
+                </h3>
+                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-2">
+                  {benefit.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

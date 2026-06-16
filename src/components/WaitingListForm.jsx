@@ -181,7 +181,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center max-w-6xl w-full mx-auto">
           
           {/* Left Column: Related Illustration */}
-          <div className="lg:col-span-6 flex justify-center items-center select-none pointer-events-none order-2 lg:order-1">
+          <div className="lg:col-span-6 flex justify-center items-center select-none pointer-events-none">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -199,7 +199,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
           </div>
 
           {/* Right Column: Form Container */}
-          <div className="lg:col-span-6 flex justify-center w-full order-1 lg:order-2">
+          <div className="lg:col-span-6 flex justify-center w-full">
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}

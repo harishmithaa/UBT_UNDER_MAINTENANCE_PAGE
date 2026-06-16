@@ -67,29 +67,29 @@ export default function Features() {
           </div>
         </div>
 
-        {/* Features 6-Column Grid with tighter gaps */}
+        {/* Features 6-Column Grid with wider cards */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
         >
           {features.map((feature, idx) => (
             <motion.div
               key={idx}
               variants={cardVariants}
-              className="card-premium rounded-xl py-4 px-3 bg-white hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group border border-slate-200/50 shadow-sm hover:shadow-md"
+              className="card-premium rounded-xl py-6 px-5 bg-white hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group border border-slate-200/50 shadow-sm hover:shadow-md"
             >
-              {/* Solid Green circular background with white icon - Reduced size */}
-              <div className="h-11 w-11 rounded-full bg-primary flex items-center justify-center shrink-0 mb-3 transition-transform duration-300 group-hover:scale-105 shadow-md shadow-emerald-950/5">
+              {/* Solid Green circular background with white icon */}
+              <div className="h-11 w-11 rounded-full bg-primary flex items-center justify-center shrink-0 mb-4 transition-transform duration-300 group-hover:scale-105 shadow-md shadow-emerald-950/5">
                 {feature.icon}
               </div>
               <div className="flex flex-col gap-1 flex-grow justify-start">
-                <h3 className="font-extrabold text-secondary text-xs sm:text-sm leading-tight transition-colors duration-300 group-hover:text-primary">
+                <h3 className="font-extrabold text-secondary text-sm sm:text-base leading-tight transition-colors duration-300 group-hover:text-primary">
                   {feature.title}
                 </h3>
-                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-0.5">
+                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-2">
                   {feature.desc}
                 </p>
               </div>

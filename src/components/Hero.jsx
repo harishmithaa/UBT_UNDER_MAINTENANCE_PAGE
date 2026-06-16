@@ -38,17 +38,17 @@ export default function Hero({ launchTarget = 'July 2026' }) {
 
   return (
     <section className="w-full relative min-h-[580px] lg:min-h-[640px] bg-white flex items-center justify-center pt-8 pb-24 px-4 md:px-8 overflow-hidden z-0 hero-gradient">
-      {/* Background Image rendered at its native 1024x576 size (desktop only) */}
+      {/* Background Image rendered as object-cover (desktop only) */}
       <img 
         src="/thirumoorthy_dam.png" 
         alt="Thirumoorthy Hills Background"
-        className="hidden lg:block absolute right-0 top-0 h-full w-auto object-contain lg:h-auto lg:w-[1024px] lg:max-h-[576px] lg:top-1/2 lg:-translate-y-1/2 pointer-events-none select-none z-0"
+        className="hidden lg:block absolute right-0 top-0 h-full w-[58%] object-cover pointer-events-none select-none z-0"
       />
 
       {/* Dynamic Gradient Overlay that smoothly blends image to transparent (desktop only) */}
       <div 
         className="hidden lg:block absolute inset-0 z-10 pointer-events-none select-none" 
-        style={{ background: "linear-gradient(to right, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0) 35%)" }} 
+        style={{ background: "linear-gradient(to right, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.7) 48%, rgba(255, 255, 255, 0) 62%)" }} 
       />
 
       {/* Background Image for mobile (portrait viewports) */}
@@ -66,7 +66,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
 
       <div className="relative max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-20">
         {/* Content Column */}
-        <div className="lg:col-span-8 flex flex-col items-start text-left">
+        <div className="lg:col-span-7 flex flex-col items-start text-left">
 
           {/* We are building something great Badge */}
           <motion.div 
@@ -156,7 +156,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
         </div>
 
         {/* Right side spacer for desktop layout balance */}
-        <div className="lg:col-span-4 hidden lg:block" />
+        <div className="lg:col-span-5 hidden lg:block" />
       </div>
 
       {/* Wavy bottom divider curves */}
