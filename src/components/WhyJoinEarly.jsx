@@ -22,8 +22,8 @@ const benefits = [
 
 export default function WhyJoinEarly() {
   return (
-    <section id="benefits-section" className="w-full bg-[#FFFFFF] py-8 px-4 md:px-8 border-t border-slate-100">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    <section id="benefits-section" className="w-full bg-[#FFFFFF] py-16 sm:py-24 px-4 md:px-8 border-t border-slate-100">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
         {/* Left Side: Summary Graphic */}
         <motion.div 
@@ -31,7 +31,7 @@ export default function WhyJoinEarly() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-5 bg-white border border-slate-200/50 rounded-2xl p-6 shadow-md flex flex-col gap-5 relative overflow-hidden"
+          className="lg:col-span-5 bg-white border border-slate-200/50 rounded-2xl p-8 shadow-md flex flex-col gap-6 relative overflow-hidden"
         >
           <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-emerald-50/55 z-0 pointer-events-none" />
           
@@ -47,7 +47,7 @@ export default function WhyJoinEarly() {
             </p>
           </div>
 
-          <div className="border-t border-slate-100 pt-4 flex flex-col gap-3.5 relative z-10">
+          <div className="border-t border-slate-100 pt-5 flex flex-col gap-4 relative z-10">
             <div className="flex items-center gap-3">
               <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
                 1
@@ -70,13 +70,13 @@ export default function WhyJoinEarly() {
         </motion.div>
 
         {/* Right Side: Detailed Benefits */}
-        <div className="lg:col-span-7 flex flex-col gap-8 sm:gap-10">
+        <div className="lg:col-span-7 flex flex-col gap-10 sm:gap-12">
           <div>
             <span className="text-primary font-extrabold text-xs uppercase tracking-widest">Early Partner Benefits</span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-secondary tracking-tight mt-1">
               Grow Your Business with Pre-Launch Exposure
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 font-semibold mt-2 leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-sm text-slate-400 font-semibold mt-2.5 leading-relaxed max-w-xl">
               Secure key directories, publish catalogs early, and accumulate initial customer search history to establish search ranking leadership.
             </p>
           </div>
@@ -86,16 +86,16 @@ export default function WhyJoinEarly() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex flex-col gap-6 sm:gap-8"
+            className="flex flex-col gap-8 sm:gap-10"
           >
             {benefits.map((benefit, idx) => (
-              <div key={idx} className="flex gap-4 items-start">
+              <div key={idx} className="flex gap-5 items-start">
                 <div className="h-7 w-7 rounded-lg bg-emerald-50 text-primary flex items-center justify-center shrink-0 mt-0.5 select-none">
                   {benefit.icon}
                 </div>
                 <div className="flex flex-col gap-0.5">
                   <h4 className="text-xs font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
-                  <p className="text-slate-500 text-xs font-semibold leading-relaxed mt-1 max-w-md sm:max-w-lg">{benefit.desc}</p>
+                  <p className="text-slate-500 text-xs font-semibold leading-relaxed mt-2 max-w-md sm:max-w-xl">{benefit.desc}</p>
                 </div>
               </div>
             ))}
