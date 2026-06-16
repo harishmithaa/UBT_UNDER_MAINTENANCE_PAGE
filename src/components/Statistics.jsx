@@ -49,7 +49,7 @@ export default function Statistics({ stats }) {
   };
 
   return (
-    <section className="w-full bg-[#FFFFFF] py-8 px-4 md:px-8">
+    <section className="w-full bg-white py-8 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Row Grid with tighter card padding */}

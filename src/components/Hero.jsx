@@ -31,7 +31,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
   };
 
   return (
-    <section className="w-full relative min-h-[580px] lg:min-h-[640px] bg-[#F8FAFC] flex items-center justify-center pt-8 pb-24 px-4 md:px-8 overflow-hidden z-0 hero-gradient">
+    <section className="w-full relative min-h-[580px] lg:min-h-[640px] bg-white flex items-center justify-center pt-8 pb-24 px-4 md:px-8 overflow-hidden z-0 hero-gradient">
       {/* Background Image rendered at its native 1024x576 size (desktop only) */}
       <img 
         src="/thirumoorthy_dam.png" 
@@ -42,7 +42,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
       {/* Dynamic Gradient Overlay that smoothly blends image to transparent (desktop only) */}
       <div 
         className="hidden lg:block absolute inset-0 z-10 pointer-events-none select-none" 
-        style={{ background: "linear-gradient(to right, rgba(248, 250, 252, 1) 15%, rgba(248, 250, 252, 0.7) 25%, rgba(248, 250, 252, 0) 35%)" }} 
+        style={{ background: "linear-gradient(to right, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 0.7) 25%, rgba(255, 255, 255, 0) 35%)" }} 
       />
 
       {/* Background Image for mobile (portrait viewports) */}
@@ -55,7 +55,7 @@ export default function Hero({ launchTarget = 'July 2026' }) {
       {/* Dynamic Gradient Overlay that smoothly blends image to transparent (mobile only) */}
       <div 
         className="block lg:hidden absolute inset-0 z-10 pointer-events-none select-none" 
-        style={{ background: "linear-gradient(to bottom, rgba(248, 250, 252, 1) 25%, rgba(248, 250, 252, 0.8) 45%, rgba(248, 250, 252, 0.1) 75%, rgba(248, 250, 252, 0) 100%)" }} 
+        style={{ background: "linear-gradient(to bottom, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0) 100%)" }} 
       />
 
       <div className="relative max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-20">

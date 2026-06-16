@@ -62,7 +62,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-full min-h-screen flex flex-col justify-between bg-[#F8FAFC] select-none text-slate-800 animate-page-entrance font-sans">
+    <div className="w-full min-h-screen flex flex-col justify-between bg-white select-none text-slate-800 animate-page-entrance font-sans">
       {/* Top Banner Notice */}
       <div className="w-full bg-[#001c41] text-white py-2 px-4 text-center text-[10px] sm:text-xs font-bold tracking-wide flex items-center justify-center gap-2 border-b border-slate-850">
         <Sparkles className="h-3.5 w-3.5 text-amber-400 animate-bounce" />

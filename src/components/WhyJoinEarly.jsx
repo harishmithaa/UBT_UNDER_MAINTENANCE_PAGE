@@ -22,7 +22,7 @@ const benefits = [
 
 export default function WhyJoinEarly() {
   return (
-    <section id="benefits-section" className="w-full bg-[#F8FAFC] py-8 px-4 md:px-8 border-t border-slate-100">
+    <section id="benefits-section" className="w-full bg-[#FFFFFF] py-8 px-4 md:px-8 border-t border-slate-100">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
         {/* Left Side: Summary Graphic */}
