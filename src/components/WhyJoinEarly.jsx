@@ -57,14 +57,14 @@ export default function WhyJoinEarly() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
         >
           {benefits.map((benefit, idx) => (
             <motion.div
               key={idx}
               variants={cardVariants}
               className={`card-premium rounded-xl py-6 px-5 bg-white hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group border border-slate-200/50 shadow-sm hover:shadow-md ${
-                idx === 2 ? 'col-span-1 sm:col-span-2 lg:col-span-1' : ''
+                idx === 2 ? 'col-span-2 lg:col-span-1' : ''
               }`}
             >
               {/* Solid Green circular background with white icon */}
@@ -75,7 +75,7 @@ export default function WhyJoinEarly() {
                 <h3 className="font-extrabold text-secondary text-sm sm:text-base leading-tight transition-colors duration-300 group-hover:text-primary">
                   {benefit.title}
                 </h3>
-                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-2">
+                <p className="text-slate-500 text-xs sm:text-sm font-semibold leading-relaxed mt-2">
                   {benefit.desc}
                 </p>
               </div>

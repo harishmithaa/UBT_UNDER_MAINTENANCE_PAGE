@@ -73,10 +73,10 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
+          className="grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6"
         >
           {features.map((feature, idx) => (
-            <motion.div
+             <motion.div
               key={idx}
               variants={cardVariants}
               className="card-premium rounded-xl py-6 px-5 bg-white hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center group border border-slate-200/50 shadow-sm hover:shadow-md"
@@ -89,7 +89,7 @@ export default function Features() {
                 <h3 className="font-extrabold text-secondary text-sm sm:text-base leading-tight transition-colors duration-300 group-hover:text-primary">
                   {feature.title}
                 </h3>
-                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-2">
+                <p className="text-slate-500 text-xs sm:text-sm font-semibold leading-relaxed mt-2">
                   {feature.desc}
                 </p>
               </div>
