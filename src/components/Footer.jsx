@@ -91,7 +91,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <svg 
-                viewBox="0 0 24 24" 
+                viewBox="-1.5 -1.5 27 27" 
                 className="h-4.5 w-4.5 text-emerald-500 shrink-0" 
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -106,7 +106,7 @@ export default function Footer() {
                   fill="white" 
                 />
               </svg>
-              <a href="https://wa.me/919787241221" target="_blank" rel="noopener noreferrer" onClick={() => handleContactClick('WhatsApp')} className="hover:text-emerald-500 transition-colors">WhatsApp</a>
+              <a href="https://wa.me/919787241221" target="_blank" rel="noopener noreferrer" onClick={() => handleContactClick('WhatsApp')} className="hover:text-emerald-500 transition-colors">WhatsApp: +91 9787241221</a>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="h-4.5 w-4.5 text-emerald-500 shrink-0" />
