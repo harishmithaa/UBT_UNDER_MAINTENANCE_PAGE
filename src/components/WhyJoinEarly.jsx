@@ -4,17 +4,17 @@ import { Award, Flame, Gift } from 'lucide-react';
 
 const benefits = [
   {
-    icon: <Award className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
+    icon: <Award className="h-5 w-5 text-primary shrink-0" />,
     title: "Priority Listing Rank",
     desc: "Early registrations will be prioritized at the top of category searches during our launch, guaranteeing maximum initial views."
   },
   {
-    icon: <Flame className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
+    icon: <Flame className="h-5 w-5 text-primary shrink-0" />,
     title: "Early Profile Setup",
     desc: "Gain early entry to build your digital visiting card, list products, and set up your details before the public launch."
   },
   {
-    icon: <Gift className="h-5 w-5 text-primary shrink-0 mt-0.5" />,
+    icon: <Gift className="h-5 w-5 text-primary shrink-0" />,
     title: "Referral Rewards",
     desc: "Invite other local businesses to UBT and earn premium account credits and marketing upgrades."
   }
@@ -89,13 +89,13 @@ export default function WhyJoinEarly() {
             className="flex flex-col gap-5"
           >
             {benefits.map((benefit, idx) => (
-              <div key={idx} className="flex gap-3.5 items-start">
-                <div className="h-7 w-7 rounded-lg bg-emerald-50 text-primary flex items-center justify-center shrink-0 mt-0.5 select-none">
+              <div key={idx} className="flex gap-4.5 items-start py-1.5">
+                <div className="h-10 w-10 rounded-xl bg-emerald-50 text-primary flex items-center justify-center shrink-0 select-none">
                   {benefit.icon}
                 </div>
-                <div className="flex flex-col gap-0.5">
-                  <h4 className="text-xs font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
-                  <p className="text-slate-500 text-xs sm:text-sm font-semibold leading-relaxed mt-0.5">{benefit.desc}</p>
+                <div className="flex flex-col gap-1">
+                  <h4 className="text-sm sm:text-base font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
+                  <p className="text-slate-500 text-sm sm:text-sm font-semibold leading-relaxed mt-0.5">{benefit.desc}</p>
                 </div>
               </div>
             ))}
