@@ -172,7 +172,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-secondary tracking-tight">
             Claim Your Spot on the Platform
           </h2>
-          <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm text-slate-500 font-semibold leading-relaxed max-w-3xl mx-auto">
             Be the first to know when we launch! Fill out the form below to lock in your priority directory listing and founding member benefits.
           </p>
         </div>

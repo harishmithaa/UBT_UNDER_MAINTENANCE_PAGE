@@ -42,13 +42,13 @@ export default function Hero({ launchTarget = 'July 2026' }) {
       <img 
         src="/thirumoorthy_dam.png" 
         alt="Thirumoorthy Hills Background"
-        className="hidden lg:block absolute right-0 top-0 h-full w-[58%] object-cover pointer-events-none select-none z-0"
+        className="hidden lg:block absolute right-0 top-0 h-full w-[64%] object-cover pointer-events-none select-none z-0"
       />
 
       {/* Dynamic Gradient Overlay that smoothly blends image to transparent (desktop only) */}
       <div 
         className="hidden lg:block absolute inset-0 z-10 pointer-events-none select-none" 
-        style={{ background: "linear-gradient(to right, rgba(255, 255, 255, 1) 32%, rgba(255, 255, 255, 0.7) 48%, rgba(255, 255, 255, 0) 62%)" }} 
+        style={{ background: "linear-gradient(to right, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 64%)" }} 
       />
 
       {/* Background Image for mobile (portrait viewports) */}
