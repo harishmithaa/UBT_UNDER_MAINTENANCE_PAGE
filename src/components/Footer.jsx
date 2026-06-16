@@ -42,7 +42,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/profile.php?id=61590472206771" onClick={() => handleSocialClick('Facebook')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
               <Facebook className="h-4 w-4" />
             </a>
-            <a href="https://www.instagram.com/udumalpet.co.in/" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
+            <a href="https://www.instagram.com/udumalpet.business/" onClick={() => handleSocialClick('Instagram')} target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full border border-slate-700 hover:border-emerald-500 flex items-center justify-center hover:bg-primary hover:text-white transition-all text-slate-400">
               <Instagram className="h-4 w-4" />
             </a>
           </div>

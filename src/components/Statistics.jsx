@@ -49,7 +49,7 @@ export default function Statistics({ stats }) {
   };
 
   return (
-    <section className="w-full bg-[#FFFFFF] py-8 px-4 md:px-8 border-t border-slate-100">
+    <section className="w-full bg-[#FFFFFF] py-8 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         
         {/* Row Grid with tighter card padding */}
@@ -72,7 +72,7 @@ export default function Statistics({ stats }) {
               <span className="text-2xl font-extrabold text-secondary tracking-tight">
                 <AnimatedCounter value={stats.businessesInterested} />+
               </span>
-              <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider mt-1">Businesses Interested</span>
+              <span className="text-xs text-slate-450 font-bold uppercase tracking-wider mt-1">Businesses Interested</span>
             </div>
           </motion.div>
 
@@ -88,7 +88,7 @@ export default function Statistics({ stats }) {
               <span className="text-2xl font-extrabold text-secondary tracking-tight">
                 <AnimatedCounter value={stats.categoriesPlanned} />+
               </span>
-              <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider mt-1">Categories Planned</span>
+              <span className="text-xs text-slate-450 font-bold uppercase tracking-wider mt-1">Categories Planned</span>
             </div>
           </motion.div>
 
@@ -104,7 +104,7 @@ export default function Statistics({ stats }) {
               <span className="text-2xl font-extrabold text-secondary tracking-tight">
                 <AnimatedCounter value={stats.eventsPlanned} />+
               </span>
-              <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider mt-1">Events Expected</span>
+              <span className="text-xs text-slate-450 font-bold uppercase tracking-wider mt-1">Events Expected</span>
             </div>
           </motion.div>
 
@@ -120,7 +120,7 @@ export default function Statistics({ stats }) {
               <span className="text-xl font-black text-secondary tracking-tight font-sans">
                 {stats.launchTarget}
               </span>
-              <span className="text-[10px] text-slate-450 font-bold uppercase tracking-wider mt-1">Launch Target</span>
+              <span className="text-xs text-slate-450 font-bold uppercase tracking-wider mt-1">Launch Target</span>
             </div>
           </motion.div>
 

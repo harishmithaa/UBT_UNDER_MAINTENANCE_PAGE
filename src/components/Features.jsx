@@ -61,7 +61,7 @@ export default function Features() {
             <div className="w-full border-t border-[#027244]/25"></div>
           </div>
           <div className="relative bg-white px-5">
-            <span className="text-[11px] sm:text-xs font-black text-primary uppercase tracking-widest font-sans">
+            <span className="text-xs sm:text-sm font-black text-primary uppercase tracking-widest font-sans">
               WHAT YOU CAN EXPECT
             </span>
           </div>
@@ -86,10 +86,10 @@ export default function Features() {
                 {feature.icon}
               </div>
               <div className="flex flex-col gap-1 flex-grow justify-start">
-                <h3 className="font-extrabold text-secondary text-[11.5px] sm:text-xs leading-tight transition-colors duration-300 group-hover:text-primary">
+                <h3 className="font-extrabold text-secondary text-xs sm:text-sm leading-tight transition-colors duration-300 group-hover:text-primary">
                   {feature.title}
                 </h3>
-                <p className="text-slate-500 text-[10px] sm:text-[11px] leading-relaxed mt-0.5">
+                <p className="text-slate-500 text-xs sm:text-sm leading-relaxed mt-0.5">
                   {feature.desc}
                 </p>
               </div>

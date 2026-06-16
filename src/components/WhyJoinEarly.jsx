@@ -36,13 +36,13 @@ export default function WhyJoinEarly() {
           <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-emerald-50/55 z-0 pointer-events-none" />
           
           <div className="relative z-10 flex flex-col gap-3">
-            <span className="text-[#d97706] font-bold text-[10px] uppercase tracking-widest bg-amber-50 border border-amber-100 rounded-full px-2.5 py-0.5 self-start">
+            <span className="text-[#d97706] font-bold text-xs uppercase tracking-widest bg-amber-50 border border-amber-100 rounded-full px-2.5 py-0.5 self-start">
               Early Access benefits
             </span>
             <h3 className="text-lg font-extrabold text-secondary tracking-tight">
               Why Register Today?
             </h3>
-            <p className="text-[11px] text-slate-400 font-semibold leading-relaxed">
+            <p className="text-sm text-slate-400 font-semibold leading-relaxed">
               Registering during the pre-launch phase guarantees your business gets prominent placement. Stand out to potential customers when we go live.
             </p>
           </div>
@@ -52,19 +52,19 @@ export default function WhyJoinEarly() {
               <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
                 1
               </div>
-              <span className="text-[11.5px] font-bold text-slate-700">Priority Listing Rank</span>
+              <span className="text-sm font-bold text-slate-700">Priority Listing Rank</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
                 2
               </div>
-              <span className="text-[11.5px] font-bold text-slate-700">Exclusive Pre-Launch Features</span>
+              <span className="text-sm font-bold text-slate-700">Exclusive Pre-Launch Features</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="h-8 w-8 rounded-full bg-emerald-50 flex items-center justify-center text-primary font-black text-xs shrink-0 select-none">
                 3
               </div>
-              <span className="text-[11.5px] font-bold text-slate-700">Referral Rewards Upgrades</span>
+              <span className="text-sm font-bold text-slate-700">Referral Rewards Upgrades</span>
             </div>
           </div>
         </motion.div>
@@ -72,11 +72,11 @@ export default function WhyJoinEarly() {
         {/* Right Side: Detailed Benefits */}
         <div className="lg:col-span-7 flex flex-col gap-6">
           <div>
-            <span className="text-primary font-extrabold text-[10px] uppercase tracking-widest">Early Partner Benefits</span>
+            <span className="text-primary font-extrabold text-xs uppercase tracking-widest">Early Partner Benefits</span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-secondary tracking-tight mt-1">
               Grow Your Business with Pre-Launch Exposure
             </h2>
-            <p className="text-[11px] text-slate-400 font-semibold mt-1.5 leading-relaxed">
+            <p className="text-sm text-slate-400 font-semibold mt-1.5 leading-relaxed">
               Secure key directories, publish catalogs early, and accumulate initial customer search history to establish search ranking leadership.
             </p>
           </div>
@@ -94,8 +94,8 @@ export default function WhyJoinEarly() {
                   {benefit.icon}
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <h4 className="text-[10px] font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
-                  <p className="text-slate-500 text-[10.5px] sm:text-xs font-semibold leading-relaxed mt-0.5">{benefit.desc}</p>
+                  <h4 className="text-xs font-black text-secondary uppercase tracking-wider">{benefit.title}</h4>
+                  <p className="text-slate-500 text-xs sm:text-sm font-semibold leading-relaxed mt-0.5">{benefit.desc}</p>
                 </div>
               </div>
             ))}

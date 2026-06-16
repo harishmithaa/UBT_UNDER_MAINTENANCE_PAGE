@@ -211,7 +211,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                 
                 {/* Full Name */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="name" className="text-[11px] font-bold text-slate-600">Full Name *</label>
+                  <label htmlFor="name" className="text-xs font-bold text-slate-600">Full Name *</label>
                   <div className={`flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl border transition-all ${errors.name ? 'border-red-400 focus-within:border-red-500' : 'border-slate-200/80 focus-within:border-primary'}`}>
                     <User className="h-4 w-4 text-slate-400 shrink-0" />
                     <input
@@ -221,12 +221,12 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-[11px] font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
+                      className="w-full bg-transparent text-sm font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
                       disabled={loading}
                     />
                   </div>
                   {errors.name && (
-                    <span className="text-[9.5px] text-red-500 font-bold flex items-center gap-1 mt-0.5">
+                    <span className="text-xs text-red-500 font-bold flex items-center gap-1 mt-0.5">
                       <AlertCircle className="h-3 w-3 shrink-0" /> {errors.name}
                     </span>
                   )}
@@ -234,7 +234,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
 
                 {/* Business Name */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="businessName" className="text-[11px] font-bold text-slate-600">Business Name *</label>
+                  <label htmlFor="businessName" className="text-xs font-bold text-slate-600">Business Name *</label>
                   <div className={`flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl border transition-all ${errors.businessName ? 'border-red-400 focus-within:border-red-500' : 'border-slate-200/80 focus-within:border-primary'}`}>
                     <Store className="h-4 w-4 text-slate-400 shrink-0" />
                     <input
@@ -244,12 +244,12 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                       placeholder="Enter your registered business name"
                       value={formData.businessName}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-[11px] font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
+                      className="w-full bg-transparent text-sm font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
                       disabled={loading}
                     />
                   </div>
                   {errors.businessName && (
-                    <span className="text-[9.5px] text-red-500 font-bold flex items-center gap-1 mt-0.5">
+                    <span className="text-xs text-red-500 font-bold flex items-center gap-1 mt-0.5">
                       <AlertCircle className="h-3 w-3 shrink-0" /> {errors.businessName}
                     </span>
                   )}
@@ -257,7 +257,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
 
                 {/* Mobile Number */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="mobile" className="text-[11px] font-bold text-slate-600">Mobile Number *</label>
+                  <label htmlFor="mobile" className="text-xs font-bold text-slate-600">Mobile Number *</label>
                   <div className={`flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl border transition-all ${errors.mobile ? 'border-red-400 focus-within:border-red-500' : 'border-slate-200/80 focus-within:border-primary'}`}>
                     <Phone className="h-4 w-4 text-slate-400 shrink-0" />
                     <input
@@ -267,12 +267,12 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                       placeholder="Enter 10-digit mobile number"
                       value={formData.mobile}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-[11px] font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
+                      className="w-full bg-transparent text-sm font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
                       disabled={loading}
                     />
                   </div>
                   {errors.mobile && (
-                    <span className="text-[9.5px] text-red-500 font-bold flex items-center gap-1 mt-0.5">
+                    <span className="text-xs text-red-500 font-bold flex items-center gap-1 mt-0.5">
                       <AlertCircle className="h-3 w-3 shrink-0" /> {errors.mobile}
                     </span>
                   )}
@@ -280,7 +280,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
 
                 {/* Category Dropdown */}
                 <div className="flex flex-col gap-1">
-                  <label htmlFor="category" className="text-[11px] font-bold text-slate-600">Business Category *</label>
+                  <label htmlFor="category" className="text-xs font-bold text-slate-600">Business Category *</label>
                   <div className={`flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl border transition-all ${errors.category ? 'border-red-400 focus-within:border-red-500' : 'border-slate-200/80 focus-within:border-primary'}`}>
                     <FolderOpen className="h-4 w-4 text-slate-400 shrink-0" />
                     <select
@@ -288,7 +288,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                       name="category"
                       value={formData.category}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-[11px] font-bold text-slate-700 focus:outline-none cursor-pointer"
+                      className="w-full bg-transparent text-sm font-bold text-slate-700 focus:outline-none cursor-pointer"
                       disabled={loading}
                     >
                       <option value="">Select Business Category</option>
@@ -298,7 +298,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                     </select>
                   </div>
                   {errors.category && (
-                    <span className="text-[9.5px] text-red-500 font-bold flex items-center gap-1 mt-0.5">
+                    <span className="text-xs text-red-500 font-bold flex items-center gap-1 mt-0.5">
                       <AlertCircle className="h-3 w-3 shrink-0" /> {errors.category}
                     </span>
                   )}
@@ -306,7 +306,7 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                   {/* Conditional input when "Others" is selected */}
                   {formData.category === 'Others' && (
                     <div className="flex flex-col gap-1 mt-2.5 animate-fadeIn">
-                      <label htmlFor="customCategory" className="text-[10.5px] font-bold text-slate-600">Please Specify Category *</label>
+                      <label htmlFor="customCategory" className="text-xs font-bold text-slate-600">Please Specify Category *</label>
                       <div className={`flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl border transition-all ${errors.customCategory ? 'border-red-400 focus-within:border-red-500' : 'border-slate-200/80 focus-within:border-primary'}`}>
                         <FolderOpen className="h-4 w-4 text-slate-400 shrink-0" />
                         <input
@@ -316,12 +316,12 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                           placeholder="Enter your custom business category"
                           value={formData.customCategory}
                           onChange={handleChange}
-                          className="w-full bg-transparent text-[11px] font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
+                          className="w-full bg-transparent text-sm font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
                           disabled={loading}
                         />
                       </div>
                       {errors.customCategory && (
-                        <span className="text-[9.5px] text-red-500 font-bold flex items-center gap-1 mt-0.5">
+                        <span className="text-xs text-red-500 font-bold flex items-center gap-1 mt-0.5">
                           <AlertCircle className="h-3 w-3 shrink-0" /> {errors.customCategory}
                         </span>
                       )}
@@ -332,8 +332,8 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                 {/* Email Address */}
                 <div className="flex flex-col gap-1">
                   <div className="flex justify-between items-center">
-                    <label htmlFor="email" className="text-[11px] font-bold text-slate-600">Email Address</label>
-                    <span className="text-[10px] text-slate-400 font-semibold">(Optional)</span>
+                    <label htmlFor="email" className="text-xs font-bold text-slate-600">Email Address</label>
+                    <span className="text-xs text-slate-400 font-semibold">(Optional)</span>
                   </div>
                   <div className={`flex items-center gap-2.5 px-3 py-2 bg-slate-50 rounded-xl border transition-all ${errors.email ? 'border-red-400 focus-within:border-red-500' : 'border-slate-200/80 focus-within:border-primary'}`}>
                     <Mail className="h-4 w-4 text-slate-400 shrink-0" />
@@ -344,26 +344,26 @@ export default function WaitingListForm({ scriptUrl, showToast }) {
                       placeholder="Enter email address (e.g. info@business.com)"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-transparent text-[11px] font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
+                      className="w-full bg-transparent text-sm font-semibold text-slate-700 placeholder-slate-450 focus:outline-none"
                       disabled={loading}
                     />
                   </div>
                   {errors.email && (
-                    <span className="text-[9.5px] text-red-500 font-bold flex items-center gap-1 mt-0.5">
+                    <span className="text-xs text-red-500 font-bold flex items-center gap-1 mt-0.5">
                       <AlertCircle className="h-3 w-3 shrink-0" /> {errors.email}
                     </span>
                   )}
                 </div>
 
                 {/* Privacy note */}
-                <span className="text-[9.5px] text-slate-400 font-medium leading-relaxed mt-0.5 block">
+                <span className="text-xs text-slate-400 font-medium leading-relaxed mt-0.5 block">
                   🛡️ We respect your privacy. Your information is securely stored and will never be shared. No spam, ever.
                 </span>
 
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className={`text-white text-[11.5px] font-extrabold py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 mt-2 cursor-pointer ${
+                  className={`text-white text-sm font-extrabold py-3 px-6 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 mt-2 cursor-pointer ${
                     isJoined 
                       ? 'bg-emerald-600 shadow-emerald-950/10 cursor-default' 
                       : 'bg-primary hover:bg-primary-hover shadow-emerald-950/15 disabled:bg-slate-300 disabled:shadow-none'
